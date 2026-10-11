@@ -1,6 +1,6 @@
 ---
 title: "Inayat Gill"
-image: profile.jpg
+image: profile.jpeg
 about:
   template: trestles
   image-width: 16em
