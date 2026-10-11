@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Inayat Gill">
+<meta name="dcterms.date" content="2026-10-12">
+<meta name="description" content="What a 2021 attribution study tells us about the chance of extreme fire weather in southeastern Australia.">
+
+<title>Black Summer: How much did climate change raise the odds? – Inayat’s Data Blog</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7c69b197886ae2a34062761d21e44731.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-4dd1f8d55b07a248877084f95612c1a1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Inayat’s Data Blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Inayat-Gill"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Black Summer: How much did climate change raise the odds?</h1>
+                  <div>
+        <div class="description">
+          What a 2021 attribution study tells us about the chance of extreme fire weather in southeastern Australia.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">climate</div>
+                <div class="quarto-category">bushfires</div>
+                <div class="quarto-category">attribution</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Inayat Gill </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 12, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<div class="callout callout-style-default callout-tip callout-titled" title="Summary">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Summary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A 2021 study estimates that climate change has made the extreme fire weather behind Australia’s 2019/20 “Black Summer” at least 30% more likely. Observations suggest the true increase is considerably larger. The change is mainly linked to rising temperature extremes. Drought, by contrast, showed no detectable climate trend.</p>
+</div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Problem</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Analysis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Conclusion</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Australia’s 2019/20 “Black Summer” bushfires burned about 19 million hectares, killed at least 34 people directly, and destroyed roughly 5,900 buildings. Smoke pushed air quality to hazardous levels in Sydney, Canberra and other cities. In one week alone, New South Wales health officials reported a 34% jump in emergency visits for asthma and breathing problems <span class="citation" data-cites="vanOldenborgh2021">(<a href="#ref-vanOldenborgh2021" role="doc-biblioref">Oldenborgh et al. 2021</a>)</span>.</p>
+<p>A disaster on this scale raises an obvious question: was it bad luck, or have the conditions that feed such fires become more common? The answer shapes how many fire seasons like this one communities should expect, and how much to invest in preparing for them.</p>
+<p>Answering it is harder than it sounds, because no single fire season can prove a trend. Scientists therefore use <em>event attribution</em>. They compare how likely an event is in today’s climate with how likely it was in an earlier climate, and the ratio of the two chances shows how much the odds have shifted.</p>
+<p>In this post I look at one such study by <span class="citation" data-cites="vanOldenborgh2021">Oldenborgh et al. (<a href="#ref-vanOldenborgh2021" role="doc-biblioref">2021</a>)</span>. It covers only the <em>weather</em> side of fire risk in southeastern Australia, the region hit hardest by the fires. It does not cover ignition sources, vegetation, or how people responded. I use it to ask three questions:</p>
+<ol type="1">
+<li>Has extreme heat become more likely since the early 1900s?</li>
+<li>Did climate change contribute to the record drought of 2019?</li>
+<li>Overall, how much more likely is the dangerous fire weather seen in 2019/20?</li>
+</ol>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<section id="where-the-evidence-comes-from" class="level4">
+<h4 class="anchored" data-anchor-id="where-the-evidence-comes-from">Where the evidence comes from</h4>
+<p>The study draws on three sources of evidence, and each is worth knowing about before looking at the results.</p>
+<ul>
+<li><strong>Observations.</strong> The main record is ERA5, a <em>reanalysis</em> from the European Centre for Medium-Range Weather Forecasts. It blends real weather observations with a weather model to rebuild the state of the atmosphere from 1979 onwards. For temperature, the authors also used a longer observational record back to 1910.</li>
+<li><strong>Climate models.</strong> The authors used eleven <em>large ensembles</em>, which are collections of many simulations from the same climate model. Not every ensemble could be used for every analysis. Five had the daily data needed for fire danger, and four were used after one was dropped for failing to reproduce heat extremes.</li>
+<li><strong>Fire indices.</strong> Fire danger was measured with the Fire Weather Index (FWI), which combines temperature, humidity, wind and recent rainfall. A second index, the Monthly Severity Rating (MSR), captures how hard a fire is to suppress. The authors checked the FWI against satellite records of burned area and found the link strongest from November to February.</li>
+</ul>
+<p>For each measure, the authors fitted a statistical model of extremes. They then compared the chance of an event as severe as 2019/20 in today’s climate with its chance in the early 1900s. The result is a <em>probability ratio</em> (PR). A PR of 2 means “twice as likely”.</p>
+</section>
+<section id="what-the-study-found" class="level4">
+<h4 class="anchored" data-anchor-id="what-the-study-found">What the study found</h4>
+<p><strong>Question 1: extreme heat shows the clearest signal.</strong> In the observations, a heatwave as rare as the one in December 2019 would have peaked 1 to 2 °C lower in the early 1900s, and would have been roughly ten times less likely. The climate models are more cautious. They put the increase at “at least twice as likely”, a figure the authors explicitly treat as a floor rather than a best guess.</p>
+<p><strong>Question 2: drought looks different.</strong> Although 2019 was Australia’s driest year on record, neither the observations nor the models showed a statistically detectable climate trend in drought. Two natural climate patterns, the Indian Ocean Dipole and the Southern Annular Mode, together explain roughly two-thirds of the July to December rainfall shortfall. Both were predicted well and gave good warning of the high fire risk in late 2019.</p>
+<p><strong>Question 3: fire danger itself has become more likely.</strong> Heat and drought feed into the fire indices, so the indices give the most direct answer to the third question. The 2019/20 season produced the highest FWI values in the ERA5 record, which starts in 1979. <a href="#fig-pr" class="quarto-xref">Figure&nbsp;1</a> compares what the observations and the models say for each measure.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-pr" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Dot plot on a logarithmic axis showing how many times more likely an event as extreme as 2019/20 is, compared with the early 1900s. Extreme heat: models at least 2 times, observations about 10 times. Fire danger (FWI): models about 1.8 times, observations at least 4 times. Fire severity (MSR): models about 2 times with a range that includes no change, observations at least 9 times.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-pr-1.png" class="img-fluid figure-img" alt="Dot plot on a logarithmic axis showing how many times more likely an event as extreme as 2019/20 is, compared with the early 1900s. Extreme heat: models at least 2 times, observations about 10 times. Fire danger (FWI): models about 1.8 times, observations at least 4 times. Fire severity (MSR): models about 2 times with a range that includes no change, observations at least 9 times." width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Observations point to a larger rise in risk than climate models do, for each of three fire-related measures
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Read the plot from left to right: the further right a point sits, the larger the increase in the chance of an event as extreme as 2019/20. The horizontal axis is logarithmic, so each equal step to the right means multiplying the odds rather than adding to them. Filled circles are best estimates, and open circles mean the study could only give a lower bound, so the true value is likely higher. For the two fire indices the horizontal line runs down to the lower end of the model range, and for the severity index it crosses the dashed “no change” line. The observation values for fire danger and severity come from ERA5. The heat values come from the longer temperature record.</p>
+<p>Two features stand out. First, observations sit well to the right of the models for every measure. Second, the models’ increase for fire severity is not statistically significant, because its range includes no change.</p>
+<p>The FWI result can also be put in terms of return periods. The ERA5 fit suggests a season this severe would now occur about once every 31 years, against once in more than 800 years in the climate of 1900. The 95% range on the current figure is wide, 4 to 500 years, and the authors note the observation-based estimate may be biased high because of a drying trend in the short ERA5 record.</p>
+<p>Looking ahead, the models suggest that at 2 °C of global warming a season this severe would be about eight times as likely as in 1900, and at least four times as likely by the lower bound. This rests on only two models.</p>
+<p><a href="#tbl-scorecard" class="quarto-xref">Table&nbsp;1</a> pulls these results together for each measure.</p>
+<div class="cell">
+<div id="tbl-scorecard" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-scorecard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: What the study found for each measure, and how far to trust it
+</figcaption>
+<div aria-describedby="tbl-scorecard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 28%">
+<col style="width: 35%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Measure</th>
+<th style="text-align: left;">What it captures</th>
+<th style="text-align: left;">What the study found</th>
+<th style="text-align: left;">How far to trust it</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Extreme heat</td>
+<td style="text-align: left;">Hottest 7-day stretch of the year</td>
+<td style="text-align: left;">A week as hot as December 2019 is at least 2× as likely as in the early 1900s</td>
+<td style="text-align: left;">Strong evidence of an increase; models probably understate its size</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Drought</td>
+<td style="text-align: left;">Low rainfall, over the year and in the driest month of the fire season</td>
+<td style="text-align: left;">No detectable climate trend; natural climate patterns explain most of the 2019 shortfall</td>
+<td style="text-align: left;">Finding of no trend does not rule out a small one</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Fire danger (FWI)</td>
+<td style="text-align: left;">Weather conditions that make fires start and spread</td>
+<td style="text-align: left;">At least 30% more likely in models; at least 4× in observations</td>
+<td style="text-align: left;">Direction is clear; observation-based size may be too high</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fire severity (MSR)</td>
+<td style="text-align: left;">How hard a fire is to bring under control</td>
+<td style="text-align: left;">At least 9× in observations; about 2× in models, not significant</td>
+<td style="text-align: left;">Large gap between observations and models</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="reading-the-evidence-with-care" class="level4">
+<h4 class="anchored" data-anchor-id="reading-the-evidence-with-care">Reading the evidence with care</h4>
+<p>Several limits affect how far these numbers can be pushed. The climate models tend to show too much natural variability and too little long-term warming compared with observations. This is why the model results are floors rather than best estimates. The ERA5 record is short, so its fire-danger trend may partly reflect natural variation. The 2 °C projection rests on only two models. The study also looks at weather alone, so it says nothing about how ignitions, fuel or fire management changed.</p>
+</section>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>The three questions from the start have different answers. Extreme heat has become more likely, by at least a factor of two and probably much more. Drought in 2019 is best explained by natural climate patterns rather than a detectable climate trend. For overall fire weather, the models show an increase of at least 30%, and observations suggest the real figure is several times higher, although that estimate may itself be biased high.</p>
+<p>Taken together, these results point to a consistent picture. Climate change has raised the chance of the dangerous fire weather seen in 2019/20, mainly through hotter extremes. This is a statement about odds, not about one season. Natural climate swings also made the 2019 season much more severe.</p>
+<p>Weather is also only part of the story. The paper stresses that preparedness, warning systems, infrastructure and land use all shaped the impacts. It notes, for example, that some planned controlled burns in 2019 could not be completed because conditions became too dry to burn safely. The authors call for urgent adaptation to changing risks, especially for the most vulnerable <span class="citation" data-cites="vanOldenborgh2021">(<a href="#ref-vanOldenborgh2021" role="doc-biblioref">Oldenborgh et al. 2021</a>)</span>. For readers, the practical message is that a season like Black Summer looks less like a remote tail risk and more like a scenario worth planning for.</p>
+</div>
+</div>
+</div>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-vanOldenborgh2021" class="csl-entry" role="listitem">
+Oldenborgh, Geert Jan van, Folmer Krikken, Sophie Lewis, et al. 2021. <span>“Attribution of the <span>Australian</span> Bushfire Risk to Anthropogenic Climate Change.”</span> <em>Natural Hazards and Earth System Sciences</em> 21 (3): 941–60. <a href="https://doi.org/10.5194/nhess-21-941-2021">https://doi.org/10.5194/nhess-21-941-2021</a>.
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
