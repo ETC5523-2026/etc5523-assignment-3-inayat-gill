@@ -14,17 +14,16 @@ about:
       href: https://www.linkedin.com/in/inayat-gill
     - icon: envelope
       text: Email
-      href: mailto:inayat.gill1999@gmail.com
+      href: mailto:igil0008@student.monash.edu
 ---
 
 ## Introduction
 
-Hi, I'm Inayat, a Master of Business Analytics student at Monash University. I come from a Computer Science background (B.E., Thapar Institute of Engineering & Technology), and I spent three years at Mercer in Gurugram, designing and delivering cognitive assessments for clients like Amazon, TCS and Accenture. Working so closely with clients taught me that good analysis only matters when it helps someone make a better decision. That's what drew me to analytics, and why I moved to Melbourne to study it. At Monash, I'm hoping to specialise in data-driven decision making and predictive modelling, and I'm excited to turn my technical and client-facing experience into insights that solve real business problems.
+Hi, I'm Inayat, a Master of Business Analytics student at Monash University. I come from a Computer Science background (B.E., Thapar Institute of Engineering & Technology), and I spent three years at Mercer in Gurugram, designing and delivering cognitive assessments for clients like Amazon, TCS and Accenture. Working so closely with clients taught me that good analysis only matters when it helps someone make a better decision. That's what drew me to analytics, and why I moved to Melbourne to study it. 
 
-## Skills
+My technical skills include R, Python, SQL, Quarto, and Excel.
 
-- **Technical:** Python, R, SQL, Tableau, Excel
-- **Client work:** stakeholder management, building long-term relationships
-- **Delivery:** meeting tight deadlines across concurrent projects
-- **Teamwork:** mentoring, and communicating with global teams
-- **Foundation:** Computer Science and engineering fundamentals
+At Monash, I'm hoping to specialise in data-driven decision making and predictive modelling, and I'm excited to turn my technical and client-facing experience into insights that solve real business problems. 
+
+
+

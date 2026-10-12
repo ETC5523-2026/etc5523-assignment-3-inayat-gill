@@ -1,11 +1,10 @@
 :root {
   --ink: #1f2933;
-  --page: #f5f8fa;
+  --page: #ffffff;
   --navy: #1b3a4b;
   --teal: #1f7a8c;
-  --bs-body-bg: #f5f8fa;
+  --bs-body-bg: #ffffff;
 }
-
 /* One background everywhere, including the title block */
 html, body, #quarto-content, #quarto-document-content,
 main.content, .quarto-title-block, #title-block-header {
@@ -35,4 +34,12 @@ a      { color: var(--teal); }
 .navbar .navbar-toggler-icon,
 .navbar .bi {
   filter: invert(1);
+}
+
+.quarto-title-banner {
+  padding-bottom: 0.5rem;
+}
+
+.callout {
+  margin-top: 0.5rem;
 }

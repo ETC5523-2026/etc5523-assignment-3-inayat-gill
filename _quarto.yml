@@ -18,5 +18,3 @@ format:
   html:
     theme: cosmo
     css: styles.css
-    mainfont: "Lato"
-    fontsize: 1.05em
