@@ -1,4 +1,45 @@
-/* css styles */
-.navbar-dark, .quarto-title-banner {
-  background-color: #006DAE;
+:root {
+  --ink: #1f2933;
+  --page: #ffffff;
+  --navy: #1b3a4b;
+  --teal: #1f7a8c;
+  --bs-body-bg: #ffffff;
+}
+/* One background everywhere, including the title block */
+html, body, #quarto-content, #quarto-document-content,
+main.content, .quarto-title-block, #title-block-header {
+  background-color: var(--page);
+}
+
+body {
+  color: var(--ink);
+  line-height: 1.65;
+}
+
+/* Headings and links */
+h1, h2 { color: var(--navy); }
+h3, h4 { color: var(--teal); }
+a      { color: var(--teal); }
+
+/* Navbar: dark background, white text */
+.navbar {
+  background-color: var(--navy) !important;
+}
+.navbar .navbar-brand,
+.navbar .navbar-title,
+.navbar .nav-link,
+.navbar .navbar-nav .nav-link {
+  color: #ffffff !important;
+}
+.navbar .navbar-toggler-icon,
+.navbar .bi {
+  filter: invert(1);
+}
+
+.quarto-title-banner {
+  padding-bottom: 0.5rem;
+}
+
+.callout {
+  margin-top: 0.5rem;
 }
