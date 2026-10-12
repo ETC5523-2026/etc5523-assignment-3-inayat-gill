@@ -64,7 +64,7 @@ div.csl-indent {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7c69b197886ae2a34062761d21e44731.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-4dd1f8d55b07a248877084f95612c1a1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -92,6 +92,23 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<style>
+
+      .quarto-title-block .quarto-title-banner h1,
+      .quarto-title-block .quarto-title-banner h2,
+      .quarto-title-block .quarto-title-banner h3,
+      .quarto-title-block .quarto-title-banner h4,
+      .quarto-title-block .quarto-title-banner h5,
+      .quarto-title-block .quarto-title-banner h6
+      {
+        color: #1b3a4b;
+      }
+
+      .quarto-title-block .quarto-title-banner {
+        color: #1b3a4b;
+background: #ffffff;
+      }
+</style>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -146,12 +163,7 @@ div.csl-indent {
           What a 2021 attribution study tells us about the chance of extreme fire weather in southeastern Australia.
         </div>
       </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">climate</div>
-                <div class="quarto-category">bushfires</div>
-                <div class="quarto-category">attribution</div>
-              </div>
-                  </div>
+                </div>
   </div>
     
   
@@ -203,10 +215,10 @@ div.csl-indent {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Problem</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Analysis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Conclusion</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Australia’s 2019/20 “Black Summer” bushfires burned about 19 million hectares, killed at least 34 people directly, and destroyed roughly 5,900 buildings. Smoke pushed air quality to hazardous levels in Sydney, Canberra and other cities. In one week alone, New South Wales health officials reported a 34% jump in emergency visits for asthma and breathing problems <span class="citation" data-cites="vanOldenborgh2021">(<a href="#ref-vanOldenborgh2021" role="doc-biblioref">Oldenborgh et al. 2021</a>)</span>.</p>
-<p>A disaster on this scale raises an obvious question: was it bad luck, or have the conditions that feed such fires become more common? The answer shapes how many fire seasons like this one communities should expect, and how much to invest in preparing for them.</p>
-<p>Answering it is harder than it sounds, because no single fire season can prove a trend. Scientists therefore use <em>event attribution</em>. They compare how likely an event is in today’s climate with how likely it was in an earlier climate, and the ratio of the two chances shows how much the odds have shifted.</p>
-<p>In this post I look at one such study by <span class="citation" data-cites="vanOldenborgh2021">Oldenborgh et al. (<a href="#ref-vanOldenborgh2021" role="doc-biblioref">2021</a>)</span>. It covers only the <em>weather</em> side of fire risk in southeastern Australia, the region hit hardest by the fires. It does not cover ignition sources, vegetation, or how people responded. I use it to ask three questions:</p>
+<p>Australia’s 2019/20 “Black Summer” bushfires burned about 19 million hectares and killed at least 34 people directly. Smoke pushed air quality to hazardous levels in cities such as Sydney and Canberra <span class="citation" data-cites="vanOldenborgh2021">(<a href="#ref-vanOldenborgh2021" role="doc-biblioref"><span class="nocase">van Oldenborgh et al.</span> 2021</a>)</span>.</p>
+<p>A disaster on this scale raises an obvious question: was it bad luck, or have the conditions behind such fires become more common? The answer shapes how many fire seasons like this one communities should expect, and how much to invest in preparing for them.</p>
+<p>No single season can prove a trend, so scientists use <em>event attribution</em>. They compare how likely an event is in today’s climate with how likely it was in an earlier one, and the ratio of the two chances shows how much the odds have shifted.</p>
+<p>This post looks at one such study by <span class="citation" data-cites="vanOldenborgh2021"><span class="nocase">van Oldenborgh et al.</span> (<a href="#ref-vanOldenborgh2021" role="doc-biblioref">2021</a>)</span>. It covers only the <em>weather</em> side of fire risk in southeastern Australia, not ignition, vegetation or how people responded. I use it to ask three questions:</p>
 <ol type="1">
 <li>Has extreme heat become more likely since the early 1900s?</li>
 <li>Did climate change contribute to the record drought of 2019?</li>
@@ -216,19 +228,19 @@ div.csl-indent {
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <section id="where-the-evidence-comes-from" class="level4">
 <h4 class="anchored" data-anchor-id="where-the-evidence-comes-from">Where the evidence comes from</h4>
-<p>The study draws on three sources of evidence, and each is worth knowing about before looking at the results.</p>
+<p>The study rests on three kinds of evidence. It helps to know what each one is before we look at the results.</p>
 <ul>
-<li><strong>Observations.</strong> The main record is ERA5, a <em>reanalysis</em> from the European Centre for Medium-Range Weather Forecasts. It blends real weather observations with a weather model to rebuild the state of the atmosphere from 1979 onwards. For temperature, the authors also used a longer observational record back to 1910.</li>
-<li><strong>Climate models.</strong> The authors used eleven <em>large ensembles</em>, which are collections of many simulations from the same climate model. Not every ensemble could be used for every analysis. Five had the daily data needed for fire danger, and four were used after one was dropped for failing to reproduce heat extremes.</li>
-<li><strong>Fire indices.</strong> Fire danger was measured with the Fire Weather Index (FWI), which combines temperature, humidity, wind and recent rainfall. A second index, the Monthly Severity Rating (MSR), captures how hard a fire is to suppress. The authors checked the FWI against satellite records of burned area and found the link strongest from November to February.</li>
+<li><strong>Observations.</strong> The main record is ERA5, a <em>reanalysis</em> produced by the European Centre for Medium-Range Weather Forecasts. It mixes real weather measurements with a weather model to piece together what the atmosphere was doing, going back to 1979. For temperature, the authors also used a longer record that reaches back to 1910.</li>
+<li><strong>Climate models.</strong> The authors drew on eleven <em>large ensembles</em>. An ensemble is a batch of many simulations run from the same climate model. Not every ensemble suited every question. Only five had the daily data needed to measure fire danger, and one of those was dropped because it couldn’t reproduce heat extremes well, leaving four.</li>
+<li><strong>Fire indices.</strong> To measure fire danger, the study uses the Fire Weather Index (FWI), which combines temperature, humidity, wind and recent rainfall. A second measure, the Monthly Severity Rating (MSR), reflects how hard a fire would be to put out. The authors checked the FWI against satellite records of burned area and found the match was strongest from November to February.</li>
 </ul>
-<p>For each measure, the authors fitted a statistical model of extremes. They then compared the chance of an event as severe as 2019/20 in today’s climate with its chance in the early 1900s. The result is a <em>probability ratio</em> (PR). A PR of 2 means “twice as likely”.</p>
+<p>For each measure, the authors fitted a statistical model of extreme values. They then asked how likely an event as severe as 2019/20 is in today’s climate, compared with the early 1900s (the paper’s model comparisons start around 1920). That comparison is a <em>probability ratio</em> (PR). A PR of 2 means the event is twice as likely.</p>
 </section>
 <section id="what-the-study-found" class="level4">
 <h4 class="anchored" data-anchor-id="what-the-study-found">What the study found</h4>
-<p><strong>Question 1: extreme heat shows the clearest signal.</strong> In the observations, a heatwave as rare as the one in December 2019 would have peaked 1 to 2 °C lower in the early 1900s, and would have been roughly ten times less likely. The climate models are more cautious. They put the increase at “at least twice as likely”, a figure the authors explicitly treat as a floor rather than a best guess.</p>
-<p><strong>Question 2: drought looks different.</strong> Although 2019 was Australia’s driest year on record, neither the observations nor the models showed a statistically detectable climate trend in drought. Two natural climate patterns, the Indian Ocean Dipole and the Southern Annular Mode, together explain roughly two-thirds of the July to December rainfall shortfall. Both were predicted well and gave good warning of the high fire risk in late 2019.</p>
-<p><strong>Question 3: fire danger itself has become more likely.</strong> Heat and drought feed into the fire indices, so the indices give the most direct answer to the third question. The 2019/20 season produced the highest FWI values in the ERA5 record, which starts in 1979. <a href="#fig-pr" class="quarto-xref">Figure&nbsp;1</a> compares what the observations and the models say for each measure.</p>
+<p><strong>Question 1: Extreme heat gives the clearest signal.</strong> In the observations, a heatwave as rare as the one in December 2019 would have peaked 1 to 2°C lower in the early 1900s, and it would have been roughly ten times less likely. The climate models are more cautious. They say such a heatwave is “at least twice as likely” now, and the authors treat that as a minimum rather than a best guess.</p>
+<p><strong>Question 2: Drought tells a different story.</strong> 2019 was Australia’s driest year on record, yet neither the observations nor the models picked up a clear climate trend in drought. Instead, two natural climate patterns, the Indian Ocean Dipole and the Southern Annular Mode, explain about a third each of the rainfall shortfall from July to December, so roughly two-thirds together. The authors note that both were predicted well, which gave early warning of the high fire risk in late 2019.</p>
+<p><strong>Question 3: Fire danger itself has become more likely.</strong> Heat and drought both feed into the fire indices, so the indices give the most direct answer to our third question. The 2019/20 season recorded the highest FWI values in the ERA5 record, which starts in 1979. According to the study, the models say this kind of fire weather is now at least 30% more likely (about 80% as a best estimate), while the observations suggest at least four times as likely. A related measure of how hard fires are to bring under control shows the same pattern: about twice as likely in the models, but at least nine times in the observations. <a href="#fig-pr" class="quarto-xref">Figure&nbsp;1</a> compares the two for each measure.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-pr" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Dot plot on a logarithmic axis showing how many times more likely an event as extreme as 2019/20 is, compared with the early 1900s. Extreme heat: models at least 2 times, observations about 10 times. Fire danger (FWI): models about 1.8 times, observations at least 4 times. Fire severity (MSR): models about 2 times with a range that includes no change, observations at least 9 times.">
@@ -243,10 +255,10 @@ Figure&nbsp;1: Observations point to a larger rise in risk than climate models d
 </div>
 </div>
 </div>
-<p>Read the plot from left to right: the further right a point sits, the larger the increase in the chance of an event as extreme as 2019/20. The horizontal axis is logarithmic, so each equal step to the right means multiplying the odds rather than adding to them. Filled circles are best estimates, and open circles mean the study could only give a lower bound, so the true value is likely higher. For the two fire indices the horizontal line runs down to the lower end of the model range, and for the severity index it crosses the dashed “no change” line. The observation values for fire danger and severity come from ERA5. The heat values come from the longer temperature record.</p>
-<p>Two features stand out. First, observations sit well to the right of the models for every measure. Second, the models’ increase for fire severity is not statistically significant, because its range includes no change.</p>
-<p>The FWI result can also be put in terms of return periods. The ERA5 fit suggests a season this severe would now occur about once every 31 years, against once in more than 800 years in the climate of 1900. The 95% range on the current figure is wide, 4 to 500 years, and the authors note the observation-based estimate may be biased high because of a drying trend in the short ERA5 record.</p>
-<p>Looking ahead, the models suggest that at 2 °C of global warming a season this severe would be about eight times as likely as in 1900, and at least four times as likely by the lower bound. This rests on only two models.</p>
+<p>Read the plot from left to right: the further right a point sits, the larger the increase in the chance of an event as extreme as 2019/20. The horizontal axis is logarithmic, so each equal step to the right means multiplying the odds rather than adding to them. Filled circles are best estimates, and open circles mean the study could only give a lower bound, so the true value is likely higher. For the two fire indices the horizontal line runs down to the lower end of the model range, and for the severity index it crosses the dashed “no change” line. The observation values for fire danger and severity come from ERA5, and the heat values come from the longer temperature record. Uncertainty ranges are not shown for the heat estimates. Drought is not in the plot because the study found no climate trend to show.</p>
+<p>Two features stand out. First, observations sit well to the right of the models for every measure. Second, the models’ range for fire severity includes no change at all, so that result is uncertain.</p>
+<p>The fire-danger result can also be put in terms of how often a season this severe should happen. The observation-based estimate suggests it would now occur about once every 31 years, compared with once in more than 800 years in the climate of 1900. That figure is very uncertain, anywhere from once every 4 years to once every 500 years. The authors also warn it may be overstated, because the short ERA5 record contains a drying trend.</p>
+<p>Looking ahead, the models suggest that at 2°C of global warming a season this severe would be about eight times as likely as in 1900, and at least four times as likely by the lower bound. This rests on only two models.</p>
 <p><a href="#tbl-scorecard" class="quarto-xref">Table&nbsp;1</a> pulls these results together for each measure.</p>
 <div class="cell">
 <div id="tbl-scorecard" class="cell quarto-float quarto-figure quarto-figure-center anchored">
@@ -258,10 +270,10 @@ Table&nbsp;1: What the study found for each measure, and how far to trust it
 <div class="cell-output-display">
 <table class="cell caption-top table table-sm table-striped small">
 <colgroup>
-<col style="width: 8%">
-<col style="width: 28%">
-<col style="width: 35%">
-<col style="width: 27%">
+<col style="width: 7%">
+<col style="width: 26%">
+<col style="width: 39%">
+<col style="width: 25%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -281,7 +293,7 @@ Table&nbsp;1: What the study found for each measure, and how far to trust it
 <tr class="even">
 <td style="text-align: left;">Drought</td>
 <td style="text-align: left;">Low rainfall, over the year and in the driest month of the fire season</td>
-<td style="text-align: left;">No detectable climate trend; natural climate patterns explain most of the 2019 shortfall</td>
+<td style="text-align: left;">No detectable climate trend; natural climate patterns account for about two-thirds of the 2019 shortfall</td>
 <td style="text-align: left;">Finding of no trend does not rule out a small one</td>
 </tr>
 <tr class="odd">
@@ -293,7 +305,7 @@ Table&nbsp;1: What the study found for each measure, and how far to trust it
 <tr class="even">
 <td style="text-align: left;">Fire severity (MSR)</td>
 <td style="text-align: left;">How hard a fire is to bring under control</td>
-<td style="text-align: left;">At least 9× in observations; about 2× in models, not significant</td>
+<td style="text-align: left;">At least 9× in observations; about 2× in models, but the range includes no change</td>
 <td style="text-align: left;">Large gap between observations and models</td>
 </tr>
 </tbody>
@@ -306,13 +318,13 @@ Table&nbsp;1: What the study found for each measure, and how far to trust it
 </section>
 <section id="reading-the-evidence-with-care" class="level4">
 <h4 class="anchored" data-anchor-id="reading-the-evidence-with-care">Reading the evidence with care</h4>
-<p>Several limits affect how far these numbers can be pushed. The climate models tend to show too much natural variability and too little long-term warming compared with observations. This is why the model results are floors rather than best estimates. The ERA5 record is short, so its fire-danger trend may partly reflect natural variation. The 2 °C projection rests on only two models. The study also looks at weather alone, so it says nothing about how ignitions, fuel or fire management changed.</p>
+<p>Several limits affect how far these numbers can be pushed. The climate models tend to show too much natural variability and too little long-term warming compared with observations. This is why the model results are floors rather than best estimates. The ERA5 record is short, so its fire-danger trend may partly reflect natural variation. The 2°C projection rests on only two models. The study also looks at weather alone, so it says nothing about how ignitions, fuel or fire management changed.</p>
 </section>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>The three questions from the start have different answers. Extreme heat has become more likely, by at least a factor of two and probably much more. Drought in 2019 is best explained by natural climate patterns rather than a detectable climate trend. For overall fire weather, the models show an increase of at least 30%, and observations suggest the real figure is several times higher, although that estimate may itself be biased high.</p>
-<p>Taken together, these results point to a consistent picture. Climate change has raised the chance of the dangerous fire weather seen in 2019/20, mainly through hotter extremes. This is a statement about odds, not about one season. Natural climate swings also made the 2019 season much more severe.</p>
-<p>Weather is also only part of the story. The paper stresses that preparedness, warning systems, infrastructure and land use all shaped the impacts. It notes, for example, that some planned controlled burns in 2019 could not be completed because conditions became too dry to burn safely. The authors call for urgent adaptation to changing risks, especially for the most vulnerable <span class="citation" data-cites="vanOldenborgh2021">(<a href="#ref-vanOldenborgh2021" role="doc-biblioref">Oldenborgh et al. 2021</a>)</span>. For readers, the practical message is that a season like Black Summer looks less like a remote tail risk and more like a scenario worth planning for.</p>
+<p>The three questions from the start have different answers. Extreme heat has become more likely, by at least a factor of two and probably much more. Drought in 2019 is best explained by natural climate patterns rather than a detectable climate trend. For overall fire weather, the models show an increase of at least 30%, and observations suggest the real figure is several times higher, although that estimate may itself be overstated.</p>
+<p>According to the study, climate change has raised the chance of the dangerous fire weather seen in 2019/20, mainly through hotter extremes. This is a statement about odds, not about one season. Natural climate swings also made the 2019 season much more severe.</p>
+<p>Weather is also only part of the story. The paper stresses that preparedness, warning systems, infrastructure and land use all shaped the impacts. It notes, for example, that some planned controlled burns in 2019 could not be completed because conditions became too dry to burn safely. The authors call for urgent adaptation to changing risks, especially for the most vulnerable <span class="citation" data-cites="vanOldenborgh2021">(<a href="#ref-vanOldenborgh2021" role="doc-biblioref"><span class="nocase">van Oldenborgh et al.</span> 2021</a>)</span>. For readers, the practical message is that a season like Black Summer looks less like a remote possibility and more like a scenario worth planning for.</p>
 </div>
 </div>
 </div>
@@ -320,7 +332,7 @@ Table&nbsp;1: What the study found for each measure, and how far to trust it
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-vanOldenborgh2021" class="csl-entry" role="listitem">
-Oldenborgh, Geert Jan van, Folmer Krikken, Sophie Lewis, et al. 2021. <span>“Attribution of the <span>Australian</span> Bushfire Risk to Anthropogenic Climate Change.”</span> <em>Natural Hazards and Earth System Sciences</em> 21 (3): 941–60. <a href="https://doi.org/10.5194/nhess-21-941-2021">https://doi.org/10.5194/nhess-21-941-2021</a>.
+<span class="nocase">van Oldenborgh, Geert Jan, Folmer Krikken, Sophie Lewis, et al.</span> 2021. <span>“Attribution of the <span>Australian</span> Bushfire Risk to Anthropogenic Climate Change.”</span> <em>Natural Hazards and Earth System Sciences</em> 21 (3): 941–60. <a href="https://doi.org/10.5194/nhess-21-941-2021">https://doi.org/10.5194/nhess-21-941-2021</a>.
 </div>
 </div>
 
@@ -401,7 +413,7 @@ Oldenborgh, Geert Jan van, Folmer Krikken, Sophie Lewis, et al. 2021. <span>“A
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ETC5523-2026\.github\.io\/etc5523-assignment-3-inayat-gill\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
